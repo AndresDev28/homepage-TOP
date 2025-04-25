@@ -1,0 +1,479 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+.header-area {
+  position: relative;
+  width: 100vw;
+}
+
+.decorative-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  background-color: #008080;
+  z-index: -1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 95%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+  z-index: 1; /**/
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem ;
+}
+
+.hero-image {
+  position: relative;
+}
+.hero-image img {
+  display: block;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 5px 0 0 5px;
+}
+.hero-image h1 {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  color: white;
+  font-size: 2em;
+  /* text-shadow: 1px 1px 2px rgb(255, 255, 255); */
+  transform: translate(-0.2rem 0);
+  mix-blend-mode: luminosity;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0 5px 5px 0;
+  padding: 2rem;
+  /* height: 400px; */
+  color: #333;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-me h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about-me p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: auto; /* ¡Truco! Esto empuja todo lo que viene después (los iconos) hacia abajo */
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* ¡Aquí alineamos los iconos al final (derecha)! */
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+.social-icons img,
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  display: block; /* Ayuda a evitar espacios extra */
+  fill: currentColor; /* Hace que los SVG tomen el color del texto si no tienen fill propio */
+  color: #333;
+}
+.social-icons a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* Main styles */
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 85vw;
+  max-width: 1100px;
+  padding: 2rem;
+}
+
+.main-title {
+  margin-bottom: 2rem;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* width: 200px; */
+  /* height: 300px; */
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  background-color: rgb(171, 3, 53);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-title h2 {
+  color: white;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: #333;
+  flex-grow: 1; /* Permite que esta sección crezca si hay espacio extra */
+}
+
+.project-name-and-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.link-icon {
+  width: 20px;
+  height: 20px;
+  fill: #333;
+  display: block;
+}
+
+.description {
+  font-size: 0.7em;
+  line-height: 1.5;
+  margin-top: auto; /* Empuja la descripción hacia abajo si hay espacio extra */
+}
+
+/* Footer styles */
+
+.contact-section {
+  background-color: #008080;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 85vw;
+  max-width: 1100px;
+  gap: 3rem;
+  padding: 2rem;
+  
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1; /* Permite que ocupe espacio */
+}
+
+.contact-details h2 {
+  margin-bottom: 0.5rem; /* Espacio bajo el título Contact me */
+}
+
+.contact-details > p {
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.contact-direction p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.phone-contact, 
+.mail-contact {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.phone-contact p,
+.mail-contact p {
+    margin: 0; /* Quitar margen del párrafo */
+}
+
+.contact-icon {
+  fill: currentColor;
+  flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+.fsocial-icons {
+  display: flex;
+  gap: 15px;
+  fill: #000; /* Hace que los SVG tomen el color del texto si no tienen fill propio */
+  margin-top: 1rem;
+}
+.fsocial-icons a box-icon { /* Seleccionar box-icon dentro del enlace */
+  fill: white; /* Forzar color blanco */
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.fsocial-icons a:hover box-icon {
+  opacity: 0.8;
+}
+
+.contact-image {
+  flex-shrink: 0;
+}
+.contact-image img {
+  display: block; 
+  max-width: 280px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* ======================================== */
+/*           MEDIA QUERIES                 */
+/* ======================================== */
+
+/* --- Tablets y Desktops Pequeños (< 1000px) --- */
+
+@media (max-width: 1000px) {
+  .content-wrapper {
+    margin: 1rem 0.5rem;
+    position: relative;
+  }
+
+  .hero-image {
+    position: relative;
+    flex: 1;
+    float: left;
+    width: 40%;
+    shape-outside: inset(0 0 0 0 round 10px);
+    shape-margin: 20px;
+  }
+
+  .hero-image img {
+    display: block;
+    border-radius: 10px;
+    max-width: 400px;
+  }
+
+  .hero-image h1 {
+    position: absolute;
+    font-size: 2.5em;
+    top: 2rem;
+    left: 56%;
+    z-index: 2;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
+
+  .about-me {
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    width: 54%;
+    max-width: 600px;
+    min-height: 430px;
+    z-index: -1;
+  }
+  .about-me h2 {
+    text-align: center;
+  }
+
+  .about-me > p {
+    text-align: right;
+    text-wrap: pretty;
+    /* overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto; */
+  }
+
+  .my-work {
+    margin-top: 6rem;
+  }
+
+  .card {
+    max-width: 200px;
+  }
+}
+
+
+/* --- Tablets Portrait y Móviles Grandes (< 768px) --- */
+@media (max-width: 767.98px) {
+  .content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    margin: 0;
+  }
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .hero-image img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .hero-image h1 {
+    position: absolute;
+    top: 22rem;
+    left: 4rem;
+    transform: translate(-0.2rem 0);
+  }
+
+  .about-me {
+    position: static;
+    width: 100%;
+    max-width: 80%;
+    min-height: auto;
+    border-radius: 5px;
+  }
+  .about-me > p {
+    text-align: left;
+  }
+
+  .my-work {
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+
+  .footer-content-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-image {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* --- Móviles Pequeños (< 576px) --- */
+@media (max-width: 575.98px) {
+  .content-wrapper {
+    padding: 1rem 0.5rem;
+  }
+
+  .about-me {
+    max-width: 80%; /* Cambiamos de 80% a 100% para aprovechar todo el ancho */
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-image h1 {
+    font-size: 1.8em; /* Reducimos un poco el tamaño del título */
+    top: 18rem;
+    left: 2rem;
+  }
+
+  .social-icons {
+    justify-content: center; /* Centramos los iconos sociales */
+  }
+
+  .main-title {
+    text-align: center;
+  }
+
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .contact-details {
+    text-align: center;
+  }
+  .phone-contact,
+  .mail-contact,
+  .fsocial-icons {
+    justify-content: center;
+  }
+  .contact-image {
+    display: none;
+  }
+}
+
